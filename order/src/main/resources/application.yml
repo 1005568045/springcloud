@@ -16,3 +16,6 @@ logging:
     com.immoc.product: trace
   pattern:
     console: '%p%m%n'
+
+server:
+  port: 8082
