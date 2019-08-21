@@ -24,4 +24,10 @@ public class ProductServiceImpl implements ProductService {
         map.put("product_status", ProductStatusEnum.UP.getCode());
         return productMapper.selectByMap(map);
     }
+
+    @Override
+    public List<ProductInfo> findByIds(List<String> productIds) {
+        List<ProductInfo> productInfos = productMapper.selectBatchIds(productIds);
+        return productInfos;
+    }
 }
